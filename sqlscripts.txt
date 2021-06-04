@@ -1,0 +1,53 @@
+CREATE POSTS TABLE
+
+CREATE TABLE `wandy`.`posts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(300) NOT NULL,
+  `description` TEXT(50000) NOT NULL,
+  `tag` VARCHAR(200) NOT NULL,
+  `createdAt` DATETIME(6) NOT NULL,
+  `updatedAt` DATETIME(6) NOT NULL,
+  `image` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE `wandy`.`category_links` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `pathname` VARCHAR(100) NOT NULL,
+  `count` BIGINT(8) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE `wandy`.`users` (
+  `username` VARCHAR(100) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `userid` INT NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`userid`));
+
+
+ALTER TABLE `wandy`.`posts` 
+CHANGE COLUMN `description` `description` TEXT(30000) NOT NULL ,
+CHANGE COLUMN `image` `image` BLOB NOT NULL ;
+
+
+CREATE TABLE `wandy`.`social` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `description` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`id`));
+
+
+ALTER TABLE `wandy`.`social` 
+CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `wandy`.`social` 
+ADD COLUMN `class` VARCHAR(50) NOT NULL AFTER `description`;
+
+
+
+
+
+
+
+

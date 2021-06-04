@@ -1,0 +1,169 @@
+.sidebar {
+  width: 23%;
+  background-color: #286fb4;
+  color: rgb(224, 216, 216);
+}
+
+.sidebar p {
+  font-family: "Great Vibes", cursive;
+  font-size: 70px;
+  color: #fff;
+}
+
+.navigation ul li {
+  list-style-type: none;
+  /*color: rgb(224, 216, 216);*/
+}
+
+.navigation > ul > li {
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.navigation > ul > li > a {
+  text-decoration: none;
+}
+
+.navigation > ul > li > a:link,
+.navigation > ul > li > a:visited,
+.socialmedia > a {
+  color: rgb(224, 216, 216);
+}
+
+.navigation > ul li > a:hover,
+.navigation > ul li > a.active:link,
+.navigation > ul li > a.active:visited,
+.sub-items li > a:hover {
+  color: #fff;
+}
+
+.submenutoggle > span {
+  float: right;
+  margin-right: 40px;
+}
+
+.submenutoggle > span > i {
+  -webkit-text-stroke: 1px #286fb4;
+}
+
+.submenutoggle:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.submenu {
+  margin-top: 30px;
+}
+
+.nosubmenu {
+  display: none;
+}
+
+.subtoggle {
+  display: block;
+  transition: 3s;
+}
+
+.sub-items li {
+  font-family: "Spartan", sans-serif;
+  margin-bottom: 15px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.sub-items li > a {
+  text-decoration: none;
+  color: rgb(224, 216, 216);
+}
+
+.socialmedia i {
+  margin-right: 30px;
+}
+
+.responsive {
+  display: block;
+}
+
+.noresponsive {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .main-container {
+    flex-wrap: wrap;
+  }
+
+  .sidebar {
+    flex: 100%;
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    flex-direction: column;
+  }
+
+  .sidebarresponsive {
+    height: 100vh;
+  }
+
+  .sub-items {
+    margin-left: 20px;
+  }
+
+  .navigation,
+  .socialmedia {
+    margin-left: 20px;
+  }
+
+  .navigation {
+    margin-top: 10%;
+  }
+
+  .socialmedia {
+    justify-content: center;
+    margin-top: 30%;
+    margin-bottom: 50px;
+  }
+
+  .toggle {
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    top: 45%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+
+  .sidebar p {
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+
+  .navigation {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+
+  .navigation li {
+    margin-left: 10px;
+  }
+
+  .socialmedia {
+    margin-top: 50%;
+    margin-left: 70px;
+    margin-bottom: 50px;
+  }
+
+  .toggle {
+    display: none;
+  }
+}

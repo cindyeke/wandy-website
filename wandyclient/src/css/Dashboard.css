@@ -1,0 +1,257 @@
+.logout > button {
+    height: 30px;
+    width: 80px;
+    background-color: #dba11c;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.logout > button:hover {
+    cursor: pointer;
+}
+
+.dashboard{
+    display: flex;
+    width: 100%;
+}
+
+.dashboard > .menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks,
+.choosecategory {
+    display: flex;
+}
+
+.task {
+    background-color: rgb(247, 245, 245);
+}
+
+.task p {
+    color: rgb(19, 18, 18);
+    font-size: 16px;
+}
+
+.task > i {
+    color: #dba11c;
+    margin-bottom: 20px;
+}
+
+.task:hover{
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 245, 245);
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    padding-bottom: 50px;
+}
+
+.choosecategory,
+.showcategory {
+    margin-top: 50px;
+}
+
+.choosecategory span{
+    padding: 10px;
+    border: 1px solid #dba11c;
+    font-size: 14px;
+}
+
+.choosecategory span:hover,
+.showcategory button:hover{
+    cursor: pointer;
+}
+
+.showcategory > div > div {
+    width: 400px;
+    margin-bottom: 10px;
+    font-size: 12px;    
+}
+
+.showcategory span {
+    float: right;
+    color: #dba11c;
+    border-left: 1px solid rgb(19, 18, 18);
+    padding-left: 10px;
+}
+
+.showcategory button {
+    border: none;
+    background-color: #dba11c;
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 2px;
+    margin-bottom: 100px;
+}
+
+.showcategory button > i{
+    -webkit-text-stroke: 1px #dba11c;
+    margin-right: 10px;
+}
+
+
+td .fa-refresh {
+    color: #dba11c;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    background-color: #dba21c65;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+td {
+    height: 50px;
+    border-bottom: 1px solid #dba21c65;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+tr i:hover{
+    cursor: pointer;
+}
+
+.message {
+    font-size: 12px;
+    margin-top: 30px; 
+    margin-left: 20px; 
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.posts > div > input[type=checkbox] {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.posts div {
+    font-size: 14px;
+}
+
+.posts img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.posts img > span {
+    margin: 0;
+}
+
+tbody input[type=text] {
+    border-bottom: none;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .logout {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .dashboard {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .tasks {
+        margin: 50px 20px 30px 20px;
+        flex-direction: column;
+    }
+
+    .task {
+        height: 100px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding-top: 20px;
+    }
+
+    .task > i,
+    .task > p {
+        margin-left: 20px;
+    }
+
+    .content {
+        margin-right: 20px;
+    }
+
+    .showcategory input[type=text],
+    .showcategory input[type=submit]{
+        width: 100%;
+    }
+
+    .choosecategory,
+    .showcategory {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .logout {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .dashboard{
+        min-height: 100vh;
+        margin-left: 23%;
+        flex-direction: column;
+    }    
+
+    .task {
+        width: 20%;
+        height: 100px;
+        margin: 30px 20px 30px 20px;
+        border-radius: 3px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .dashboard > .menu {
+        width: 100%;
+        margin-top: 60px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .choosecategory,
+    .showcategory {
+        margin-left: 20px;
+    }
+
+    .showcategory input[type=text],
+    .showcategory input[type=submit]{
+        width: 50%;
+    }
+
+    .posts {
+        margin-right: 20px;
+    }
+
+    .posts > input[type=text]{
+        width: 100%;
+    }
+}
