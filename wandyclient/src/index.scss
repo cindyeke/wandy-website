@@ -1,0 +1,45 @@
+@import "./scss/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: $page-background-theme !important;
+}
+
+.sidebar p {
+  font-family: sectionfontstyle($section-title);
+}
+
+.loadmore,
+.dashboard > article > h1,
+table,
+.choosecategory,
+.showcategory {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.article-category,
+.task > p {
+  font-family: "Spartan", sans-serif;
+}
+
+.article h2,
+.footer-section p {
+  font-family: "Spartan", sans-serif;
+}
+
+.article-preview {
+  font-size: 14px;
+  font-family: "Spartan", sans-serif;
+}
+
+.navigation li,
+.readmore,
+.footer-section li {
+  font-family: sectionfontstyle($section-navigation);
+}

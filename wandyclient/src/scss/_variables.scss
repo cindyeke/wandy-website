@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+
+$page-background-theme: #e2e2e2;
+$navigation-background: #222324;
+$footer-background: #c38423;
+
+$section-title: "title";
+$section-navigation: "navigation";
+
+$font-title: "Vidaloka", serif;
+$font-navigation: "Roboto", sans-serif;
+
+@function sectionfontstyle($section) {
+  @if $section == $section-title {
+    @return $font-title;
+  }
+
+  @if $section == $section-navigation {
+    @return $font-navigation;
+  }
+
+  //   @if $section == $section-navigation {
+  //     @return $font-navigation;
+  //   }
+
+  //   @if $section == $section-navigation {
+  //     @return $font-navigation;
+  //   }
+
+  //   @if $section == $section-navigation {
+  //     @return $font-navigation;
+  //   }
+
+  //   @if $section == $section-navigation {
+  //     @return $font-navigation;
+  //   }
+}

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+.footer {
+  background-color: #c38423;
+  padding: 1.5rem;
+  color: #e2e2e2;
+}
+
+.footer-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-section div {
+  font-family: "Vidaloka", serif;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-section .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-section .list i {
+  padding: 1.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer {
+    width: 77%;
+    margin-left: 23%;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */
