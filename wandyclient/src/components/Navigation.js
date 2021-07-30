@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../scss/Navigation.scss";
 import "font-awesome/css/font-awesome.min.css";
 
 function Navigation({ links, socialLinks }) {
   const sidebarRef = useRef(null);
+  const submenutoggle = useRef(null);
 
   const [mobileDisplay, setMobileDisplay] = useState(false);
   const [clickDropdown, setClickDropdown] = useState(false);
@@ -13,7 +14,16 @@ function Navigation({ links, socialLinks }) {
   const showNavLinks = () =>
     window.innerWidth <= 1023 && setMobileDisplay(true);
 
-  const handleDropdown = () => setClickDropdown(!clickDropdown);
+  const handleDropdown = () => {
+    setClickDropdown(!clickDropdown);
+
+    !clickDropdown
+      ? submenutoggle.current.classList.add("clickedtoggle")
+      : submenutoggle.current.classList.remove("clickedtoggle");
+    // submenutoggle.current.style = !clickDropdown
+    //   ? "height: 200px"
+    //   : "height: initial";
+  };
 
   useEffect(() => {
     showNavLinks();
@@ -60,7 +70,7 @@ function Navigation({ links, socialLinks }) {
   return (
     <nav
       ref={sidebarRef}
-      className={`sidebar ${!toggleIcon ? "sidebarresponsive" : ""}`}
+      className={`sidebar ${!toggleIcon && "sidebarresponsive"}`}
     >
       <div style={{ position: "relative" }}>
         <p>Wandy</p>
@@ -82,7 +92,11 @@ function Navigation({ links, socialLinks }) {
                 HOME
               </NavLink>
             </li>
-            <li onClick={handleDropdown} className="submenutoggle">
+            <li
+              onClick={handleDropdown}
+              className="submenutoggle"
+              ref={submenutoggle}
+            >
               CATEGORY{" "}
               <span>
                 <i

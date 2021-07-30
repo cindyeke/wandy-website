@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
 .article-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,23 +50,13 @@
 }
 
 .article-category,
-.readmore,
-.footer-section li {
-  font-family: "Spartan", sans-serif;
-}
-
-.article-category,
 .readmore {
   font-weight: bold;
-  color: #dba11c;
-}
-
-.article-category {
-  font-size: 8px;
+  color: #c38423;
 }
 
 .article-preview:before {
-  content: '...';
+  content: "...";
   position: absolute;
   right: 0;
   bottom: 0;
@@ -78,7 +73,7 @@
 }
 
 .article-preview:after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   width: 1em;
@@ -96,10 +91,6 @@
 .article a {
   text-decoration: none;
   color: inherit;
-}
-
-.readmore {
-  font-size: 8px;
 }
 
 .loadcontainer {

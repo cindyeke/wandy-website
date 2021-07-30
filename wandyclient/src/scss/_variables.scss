@@ -13,9 +13,11 @@ $footer-background: #c38423;
 
 $section-title: "title";
 $section-navigation: "navigation";
+$section-article: "article";
 
 $font-title: "Vidaloka", serif;
 $font-navigation: "Roboto", sans-serif;
+$font-article: "Spartan", sans-serif;
 
 @function sectionfontstyle($section) {
   @if $section == $section-title {
@@ -26,9 +28,9 @@ $font-navigation: "Roboto", sans-serif;
     @return $font-navigation;
   }
 
-  //   @if $section == $section-navigation {
-  //     @return $font-navigation;
-  //   }
+  @if $section == $section-article {
+    @return $font-article;
+  }
 
   //   @if $section == $section-navigation {
   //     @return $font-navigation;

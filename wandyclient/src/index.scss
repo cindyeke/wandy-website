@@ -23,23 +23,34 @@ table,
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.article-category,
-.task > p {
-  font-family: "Spartan", sans-serif;
+.article h2,
+.post-container > h2 {
+  font-family: sectionfontstyle($section-article);
 }
 
-.article h2,
-.footer-section p {
-  font-family: "Spartan", sans-serif;
+.task > p {
+  font-family: sectionfontstyle($section-navigation);
 }
 
 .article-preview {
-  font-size: 14px;
-  font-family: "Spartan", sans-serif;
+  font-size: 1rem;
+  font-family: sectionfontstyle($section-navigation);
+}
+
+.readmore {
+  font-size: 4rem;
+}
+
+.article-category {
+  font-size: 0.8rem;
 }
 
 .navigation li,
+.sub-items li,
 .readmore,
-.footer-section li {
+.article-category,
+.footer-section li,
+.footer-section p,
+.post-container p {
   font-family: sectionfontstyle($section-navigation);
 }

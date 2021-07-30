@@ -11,12 +11,11 @@
 
 .navigation ul li {
   list-style-type: none;
-  /*color: rgb(224, 216, 216);*/
 }
 
 .navigation > ul > li {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .navigation > ul > li > a {
@@ -36,6 +35,16 @@
   color: #fff;
 }
 
+.submenutoggle {
+  height: 20px;
+  -webkit-transition: height 1s ease;
+  transition: height 1s ease;
+}
+
+.clickedtoggle {
+  height: 210px;
+}
+
 .submenutoggle > span {
   float: right;
   margin-right: 40px;
@@ -52,10 +61,15 @@
 
 .submenu {
   margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 1s, opacity 2s ease;
+  transition: visibility 1s, opacity 2s ease;
 }
 
 .nosubmenu {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .subtoggle {
@@ -65,9 +79,8 @@
 }
 
 .sub-items li {
-  font-family: "Spartan", sans-serif;
   margin-bottom: 15px;
-  font-size: 10px;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
@@ -155,16 +168,21 @@
     margin-left: 30px;
   }
   .navigation {
-    margin-top: 50px;
     margin-left: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 70vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .navigation li {
     margin-left: 10px;
-  }
-  .socialmedia {
-    margin-top: 50%;
-    margin-left: 70px;
-    margin-bottom: 50px;
   }
   .toggle {
     display: none;
