@@ -66,11 +66,11 @@ function Home() {
 
   return (
     <StyledHome>
-      {/* <HomePosts
+      <HomePosts
         posts={posts}
         postsCount={postsView === 0 || postsView < 6 ? undefined : postsCount}
         handleLoadMore={handleLoadMore}
-      /> */}
+      />
     </StyledHome>
   );
 }

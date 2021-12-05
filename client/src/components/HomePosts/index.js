@@ -1,7 +1,15 @@
 import React from "react";
 // import "../scss/Home.scss";
 import { Link } from "react-router-dom";
-import { StyledHomePosts, HomePostImg, H2 } from "./StyledHomePosts";
+import {
+  StyledHomePosts,
+  ImgContainer,
+  HomePostImg,
+  H2,
+  HomePostDetails,
+  ArticleP,
+  ArticlePreview,
+} from "./StyledHomePosts";
 
 function HomePosts({ posts, postsCount, handleLoadMore }) {
   return (
@@ -19,41 +27,53 @@ function HomePosts({ posts, postsCount, handleLoadMore }) {
               },
             }}
           >
-            <div style={{ height: "350px", overflow: "hidden" }}>
+            <ImgContainer>
               <HomePostImg
                 src={`http://localhost:5000/${post.image}`}
                 alt={post.image}
               />
-            </div>
+            </ImgContainer>
           </Link>
-          <Link
-            to={{
-              pathname: `/post/${post.id}`,
-              postProps: {
-                name: `${post.title}`,
-                postcontent: `${post.description}`,
-                lastUpdate: `${post.updatedAt}`,
-                postImg: `${post.image}`,
-              },
-            }}
-          >
-            <H2>{post.title}</H2>
-          </Link>
-          <p className="article-category">{post.tag}</p>
-          <p className="article-preview">{post.description}</p>
-          <Link
-            to={{
-              pathname: `/post/${post.id}`,
-              postProps: {
-                name: `${post.title}`,
-                postcontent: `${post.description}`,
-                lastUpdate: `${post.updatedAt}`,
-                postImg: `${post.image}`,
-              },
-            }}
-          >
-            <p className="readmore">CONTINUE READING</p>
-          </Link>
+          <HomePostDetails>
+            <H2>
+              <Link
+                to={{
+                  pathname: `/post/${post.id}`,
+                  postProps: {
+                    name: `${post.title}`,
+                    postcontent: `${post.description}`,
+                    lastUpdate: `${post.updatedAt}`,
+                    postImg: `${post.image}`,
+                  },
+                }}
+              >
+                {post.title}
+              </Link>
+            </H2>
+            <ArticleP>
+              <i className="fa fa-tag" style={{ marginRight: "0.5rem" }}></i>
+              {post.tag}
+            </ArticleP>
+            <ArticlePreview className="article-preview">
+              {post.description}
+            </ArticlePreview>
+
+            <ArticleP nomargin nobold>
+              <Link
+                to={{
+                  pathname: `/post/${post.id}`,
+                  postProps: {
+                    name: `${post.title}`,
+                    postcontent: `${post.description}`,
+                    lastUpdate: `${post.updatedAt}`,
+                    postImg: `${post.image}`,
+                  },
+                }}
+              >
+                CONTINUE READING
+              </Link>
+            </ArticleP>
+          </HomePostDetails>
         </StyledHomePosts>
       ))}
 

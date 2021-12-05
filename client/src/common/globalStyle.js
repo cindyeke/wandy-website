@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     --color-header: #222324;
     --color-white: #FCF5E5;
+    --color-orange: #E79C25;
     /* --color-gray: #999999;
     --color-lightgray: #dcdcdc;
     --color-darkgray: #909090;
